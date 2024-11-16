@@ -31,6 +31,13 @@ nav {
   color: #fff;
 }
 
+.logo img {
+  max-width: 90px; /* Adjust this value as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures proper alignment */
+  margin: 0 auto; /* Centers the logo if necessary */
+}
+
 .logo a span {
   color: #8739fa;
 }
@@ -111,7 +118,7 @@ nav {
   text-align: center;
   margin-top: 20px;
 }
-.donwload-text {
+.download-text {
   font-size: 36px;
   line-height: 50px;
   color: #f2ebe2;
@@ -245,13 +252,21 @@ nav {
   opacity: 0;
 }
 
-.faq-cont {
+/* .faq-cont {
   border: #ebebeb 1px solid;
   background-color: #fff;
   transition: 0.3s all;
   overflow: hidden;
   padding: 0 20px;
   height: 0px;
+} */
+.faq-cont {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-item-show .faq-cont {
+  max-height: 500px; /* Adjust based on your content */
 }
 
 .faq-item .faq-item-show + .faq-cont {
@@ -272,7 +287,7 @@ nav {
 .faq-list-sec {
   padding: 40px 0;
 }
-.list-quries {
+.list-queries {
   padding: 40px 0;
 }
 .search-quries {
